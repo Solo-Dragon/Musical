@@ -43,7 +43,7 @@ Use the buttons below to know more about me.""",
 
 
 @Client.on_message(
-    filters.command("start")
+    filters.command("help")
     & filters.private
     & ~ filters.edited
 )
