@@ -82,9 +82,6 @@ async def playfile(client: Client, message_: Message):
     else:
         await res.edit_text("▶️ Playing...")
         res.delete
-       """ m = await client.send_photo(
-        chat_id=message_.chat.id,
-        photo="https://i.imgur.com/s5DuS8p.png","""
         m = await client.send_video(
         chat_id=message_.chat.id,
         video="https://i.imgur.com/uCN0wlx.mp4",
