@@ -32,7 +32,7 @@ async def resume(client: Client, message: Message):
 
 
 @Client.on_message(
-    filters.command(["stopm", "end"])
+    filters.command(["stopit", "end", "kill"])
     & filters.group
     & ~ filters.edited
 )
@@ -87,9 +87,9 @@ async def admincache(client, message: Message):
 #   os.execl(sys.executable, *args)
 
 @Client.on_message(
-    filters.command("helpmusic")
+    filters.command("vcmusic")
     & filters.group
     & ~ filters.edited
 )
 async def helper(client , message:Message):
-     await message.reply_text("The commands and there use is explained here-: \n `/deezer` To search the song on deezer and get good quality stream \n `/playm` <your song name> play it on voice chat. \n '/playthis` Reply this in response to a link or any telegram audio file it will be played \n `/skip` to skip current song \n `/stopm or /kill` to stop the streaming of song \n `/pause` to pause the stream \n `/resume` to resume the playback. \n Inline search is also supported.")
+     await message.reply_text("[The commands and there use is explained here-:](https://i.imgur.com/s5DuS8p.png) \n\n `/deezer` To search the song on deezer and get good quality stream \n\n `/ytp` <your song name> play it on voice chat. \n\n '/playfile` Reply this in response to a link or any telegram audio file it will be played \n\n `/skip or /next` to skip current song \n\n `/stop or /kill` to stop the streaming of song \n\n `/pause` to pause the stream \n `/resume` to resume the playback. \n\n\n Inline search is also supported.")
