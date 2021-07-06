@@ -30,12 +30,12 @@ from helpers.errors import DurationLimitError
 
 chat_id = None
 @Client.on_message(
-    filters.command("playthis")
+    filters.command("playfile")
     & filters.group
     & ~ filters.edited
 )
 @errors
-async def playthis(client: Client, message_: Message):
+async def playfile(client: Client, message_: Message):
     audio = (message_.reply_to_message.audio or message_.reply_to_message.voice) if message_.reply_to_message else None
     chat_id=message_.chat.id
     res = await message_.reply_text("🔄 Processing...")
@@ -82,10 +82,13 @@ async def playthis(client: Client, message_: Message):
     else:
         await res.edit_text("▶️ Playing...")
         res.delete
-        m = await client.send_photo(
+       """ m = await client.send_photo(
         chat_id=message_.chat.id,
-        photo="https://telegra.ph/file/5113434dcbd3e627a8b5d.jpg",
-        caption=f"Don't Forget to add @IGRISMUSIC in group to listen your song.",
+        photo="https://i.imgur.com/s5DuS8p.png","""
+        m = await client.send_video(
+        chat_id=message_.chat.id,
+        video="https://i.imgur.com/uCN0wlx.mp4",
+        caption=f"PLaying Your song via AniFunChat Music.",
          ) 
         tgcalls.pytgcalls.join_group_call(message_.chat.id, file_path)
 
@@ -98,7 +101,7 @@ async def deezer(client: Client, message_: Message):
     requested_by = message_.from_user.first_name
     text = message_.text.split(" ", 1)
     queryy = text[1]
-    res = await message_.reply_text(f"Searching 🔍🔎🔍🔎 for `{queryy}` on deezer")
+    res = await message_.reply_text(f"Searching for **{queryy}** on deezer")
     try:
         ARQ_API = "WBEHZZ-VEPXPP-KBGKCJ-WILPNE-ARQ"
         ARQ_API_URL = "https://thearq.tech"
@@ -142,16 +145,16 @@ def changeImageSize(maxWidth, maxHeight, image):
     return newImage
  
 @Client.on_message(
-    filters.command("playm")
+    filters.command("ytp")
     & filters.group
     & ~ filters.edited
 )
-async def playm(client: Client, message_: Message):
+async def ytp(client: Client, message_: Message):
     requested_by = message_.from_user.first_name
     chat_id=message_.chat.id
     text = message_.text.split(" ", 1)
     query = text[1]
-    res = await message_.reply_text(f"Searching... `{query}` on @IGRISXROBOT")
+    res = await message_.reply_text(f"Searching... **{query}**")
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
         link = f"https://youtube.com{results[0]['url_suffix']}"
@@ -178,11 +181,19 @@ async def playm(client: Client, message_: Message):
     res.delete
     m = await client.send_photo(
         chat_id=message_.chat.id,
-        caption=f"Add @IGRISMUSIC in group to listen this song `{query}` Via IGRISXROBOT",
+        caption=f"Playing **{query}** Via Jin's Music Bot",
         photo="final.png",
         reply_markup=InlineKeyboardMarkup(
-            [
-                 [     InlineKeyboardButton("Watch on Youtube", url=link)]]
+                [
+              [InlineKeyboardButton("➢watch on Youtube", url=link)],
+             
+    [
+        InlineKeyboardButton("➣Support Us", url="https://t.me/animewatcherz"), 
+        InlineKeyboardButton("➲Chat Group", url="https://t.me/Animefunchat")
+    ],   
+       
+             
+         ]
         ),
         parse_mode="markdown",
     )
@@ -196,7 +207,7 @@ async def generate_cover_square(requested_by, title, artist, duration, thumbnail
                 await f.write(await resp.read())
                 await f.close()
     image1 = Image.open("./background.png")
-    image2 = Image.open("etc/IGRIS.png")
+    image2 = Image.open("etc/SJW.png")
     image3 = changeImageSize(600, 500, image1)
     image4 = changeImageSize(600, 500, image2)
     image5 = image3.convert("RGBA")
@@ -236,7 +247,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                 await f.close()
 
     image1 = Image.open("./background.png")
-    image2 = Image.open("etc/IGRIS.png")
+    image2 = Image.open("etc/SJW.png")
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
