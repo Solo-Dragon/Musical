@@ -23,8 +23,6 @@ Neither su music project , nor pytgcalls are stable
 - Python 3.7+
 - [PyTgCalls](https://github.com/pytgcalls/pytgcalls)
 
-## Deployment
-` Don't forget to star 🌟 us `
 ### Config
 
 Copy `example.env` to `.env` and fill it with your credentials.
