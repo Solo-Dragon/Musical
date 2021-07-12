@@ -1,6 +1,3 @@
-# DevilCodes Music Telegram Bot - This is a pyrogram bot based on pytgcalls for playing songs or audio files in Telegram group voice chat
-[![Devil](https://telegra.ph/file/f739907e5a8c8aa78e758.jpg)](https://t.me/devilcodes_inc)
-![GitHub repo size](https://img.shields.io/github/repo-size/edguru/devilsmusic)
 
 ## Notes
 -The commands and there use is explained here-:
@@ -55,13 +52,5 @@ Copy `example.env` to `.env` and fill it with your credentials.
    ```
 
 ### Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/edguru/devilsmusic/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Solo-Dragon/Musical/)
 
-## Support
-- [Channel](https://t.me/devilcodes_inc)
-- [Group](https://t.me/devilcodes_network)
-## Credits
-- [hamker cat](https://github.com/thehamkercat/Telegram_VC_Bot)
-- [Roj](https://github.com/rojserbest)
-- [Marvin](https://github.com/BlackStoneReborn)
-- [Laky](https://github.com/Laky-64) & [Andrew](https://github.com/AndrewLaneX): PyTgCalls
