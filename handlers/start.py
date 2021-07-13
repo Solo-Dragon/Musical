@@ -51,12 +51,11 @@ async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>👋🏻 Ahoy {message.from_user.first_name}! Contact @KazutoSupport if you need any help...</b>
 ╓**The commands and there use is explained here-:**
-╠`/saavn` To search song on jio saavan and play the first result
 ╠`/ytp` To search the song on Youtube and play the first matching result 
 ╠`/play` Reply this in response to a link or any audio file it will be played
 ╠`/skip` to skip current song 
 ╠`/stop or /end or /kill` to stop the streaming of song 
-╠ `/resume` to resume the playback. \n Inline search is also supported.
+╠`/resume` to resume the playback. \n╠Inline search is also supported.
 ╙`/pause` to pause the stream
 ┣**Note:-** `This is a private bot for @AnimeFunChat We may or may not let you use it....`
 **To add in your group contact us at @AnimeFunChat**
