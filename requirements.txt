@@ -12,3 +12,4 @@ wget
 python-arq
 git+https://github.com/pytgcalls/pytgcalls
 Pyrogram
+git+https://github.com/adit/heroku-buildpack-youtube-dl-latest
