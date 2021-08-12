@@ -100,7 +100,7 @@ async def deezer(client: Client, message_: Message):
     queryy = text[1]
     res = await message_.reply_text(f"Searching for **{queryy}** on deezer")
     try:
-        ARQ_API = "WBEHZZ-VEPXPP-KBGKCJ-WILPNE-ARQ"
+        ARQ_API = "QVUTDT-FFFCFS-RJOZVE-BXZXQU-ARQ"
         ARQ_API_URL = "https://thearq.tech"
         arq = ARQ(ARQ_API_URL, ARQ_API)
         r = await arq.deezer(query=queryy, limit=1)
